@@ -31,12 +31,13 @@ public class factorial {
 			quit(args[0]);
 		}
 		
-		int f  = iterativeFactorial(n);
+		//int f  = iterativeFactorial(n);
 
-		// int f  = recursiveFactorial(n);
+		//int f  = recursiveFactorial(n);
+		int f = recursiveSum(n);
 		
-		System.out.println("The factorial of "+ n + " is " + f + ".");
-
+		//System.out.println("The factorial of "+ n + " is " + f + ".");
+		System.out.println("The sum of "+ n + " is " + f + ".");
 	}
 	
 
@@ -65,8 +66,26 @@ public class factorial {
 	 * @return	the factorial of n
 	 */
 	private static int recursiveFactorial(int n)  {
-		
-		return 0; // dummy return so file compiles, replace when writing method	
+		if(n == 1){
+			return 1;
+		}
+
+		return n * recursiveFactorial(n - 1); // dummy return so file compiles, replace when writing method	
+	}
+	/**
+	 * recursiveSum
+	 * 		recursively computer the sum of a number and all numbers less than it greater than 0
+	 *
+	 * @param int n - the number to find the the sum of, must be non-negative
+	 *
+	 * @return the sum of n and all numbers less than n
+	 */
+	private static int recursiveSum(int n){
+		if(n == 1){
+			return 1;
+		}
+
+		return n + recursiveSum(n - 1);
 	}
 
 	

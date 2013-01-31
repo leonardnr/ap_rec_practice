@@ -34,10 +34,9 @@ public class fibonacci {
 		}
 
 		System.out.println("The first " + args[0] + " fibonacci numbers are: ");
-		
 		iterativeFibonacci(Integer.parseInt(args[0]));
 		
-		// recursiveFibonacci(args[1]);
+		//System.out.println("The fibonacci number at index " + Integer.parseInt(args[0]) + " is " + recursiveFibonacci(Integer.parseInt((args[0]))) + ".");
 	}
 
 
@@ -65,8 +64,14 @@ public class fibonacci {
 	 * 
 	 * @param n - the number of fibonacci numbers to find. must be non-negative.
 	 */
-	public static void recursiveFibonacci(int n) {
+	public static int recursiveFibonacci(int n) {
+		if (n < 2){
+			return n;
+		}else{
+			return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+		}
 
+	
 	}
 
 }

@@ -31,7 +31,16 @@ class palindrome {
 		return true;
 	}
 
-	public static void recursivePalindrome(String word){
+	public static String recursivePalindrome(String word){
+		if(word.length() < 2){
+			return ;
+		}
 
+		if(word.charAt(0) == word.charAt(word.length() - 1)){
+			return recursivePalindrome(word.substring(1, word.length() - 2));
+		}else{
+
+		}
+		
 	}
 }

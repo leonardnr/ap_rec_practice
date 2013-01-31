@@ -45,7 +45,6 @@ public class fibonacci {
 	 * 		iteratively computes the first n fibonacci numbers
 	 * 
 	 * @param n - the number of fibonacci numbers to find. must be non-negative.
-	 * @return last term of sequence
 	 */
 	public static void iterativeFibonacci(int n) {
 		int fibo = 0;
@@ -63,6 +62,7 @@ public class fibonacci {
 	 * 		recursively computes the first n fibonacci numbers
 	 * 
 	 * @param n - the number of fibonacci numbers to find. must be non-negative.
+	 * @return returns the nth term of the fibonacci sequence
 	 */
 	public static int recursiveFibonacci(int n) {
 		if (n < 2){
